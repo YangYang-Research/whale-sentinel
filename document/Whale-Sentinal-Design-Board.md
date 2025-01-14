@@ -8,10 +8,12 @@
 ## High Level Architecture
 
 
-## AWS Deployment Architecture
-
-
 ## WS-Web Agent Architecture
+
+
+## WS-Web Agent - AWS Deployment Architecture
+
+
 
 
 ## ...
