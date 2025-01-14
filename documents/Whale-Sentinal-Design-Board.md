@@ -1,6 +1,6 @@
-# Whale Sentinal Design Board
+# Whale Sentinel Design Board
 
-## Whale Sentinal (WS) Solution
+## Whale Sentinel (WS) Solution
 
 - WS-Web Agent
 - WS-Mobile Agent
