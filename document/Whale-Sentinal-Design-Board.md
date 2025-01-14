@@ -14,6 +14,16 @@
 ## WS-Web Agent - AWS Deployment Architecture
 
 
+## Principal Security
 
+### DevSecOps 
 
-## ...
+### MLSecOps
+
+### Application
+
+### Network 
+
+### Data
+
+### Cryptography
