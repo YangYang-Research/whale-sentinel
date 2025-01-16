@@ -25,12 +25,11 @@
 Implementing Language-theoretic Security (LangSec) in application development involves designing input-handling routines as formal language recognizers, ensuring that all inputs are strictly validated and parsed according to well-defined grammars, thereby mitigating vulnerabilities and enhancing overall security.
 
 - All data is validated at both the frontend and backend.
-  - Input
+  - Text input / output
     - All data is validated at both the frontend and backend, and special characters are filtered and removed. ``!` @ # $ % ^ & * () - _ = + { } [ ] | \ : ; " ' < > , . ? / ~ \``
     - Use prepared statements (also known as parameterized queries) to prevent SQL Injection.
-  - Output
     - Ensure data is encoded before it is sent back to the application.
-    - Disable debug mode. Do not display detailed error messages in the application. Instead, show a general error message or redirect users to an error page.
+    - Do not display detailed error messages in the application. Instead, show a general error message or redirect users to an error page.
     - Masking sensitive information, such as passwords and personally identifiable information (PII).
   - File upload
     - Whitelist file extensions (e.g., pdf, png, jpg, etc.).
@@ -40,12 +39,14 @@ Implementing Language-theoretic Security (LangSec) in application development in
     - Create a random name for the file before saving it.
     - Save the file to the specified directory.
 -  Check authentication and authorization before performing any action.
+-  Use the GET method to retrieve data and the POST method to update data.
 
 ### Network 
 
+- By default, deny all connections. Allow connections only when needed.
 - All connections are encrypted in transit using HTTPS and at least TLS 1.2 for secure communication.
 - Use SFTP with TLS 1.2 or above for file transfers.
-- Use CCA (CLient Certificate Authentication) for ... 
+<!-- - Use CCA (CLient Certificate Authentication) for ... -->
 
 
 ### Data
@@ -61,7 +62,7 @@ Implementing Language-theoretic Security (LangSec) in application development in
   - Strong Encryption Algorithms : AES 256, RSA 2048, ECC.
 - Use AES256 to encryption E2E message with sensitve data when transfer.
 - Use PGP to encryption file when tranfer.
-- Use RSA for signing and SHA-256 for checksums.
+- Use SHA256withRSA for request signing.
 - Use JWT with RS256 (RSA Signature with SHA-256) for REST API authentication with a secret key length of 2048 bits or RSA 2048 for public and private keys.
 - Follow the X.509 Version 3 Certificate format for certificates.
 
