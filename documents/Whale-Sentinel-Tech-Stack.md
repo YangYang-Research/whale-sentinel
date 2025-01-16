@@ -3,7 +3,8 @@
 ## Whale Sentinel Management
 
 - React
-- PostgresQL
+- Golang
+- MongoDB
 - Kafka
 - Redis cache
 - Websocket
