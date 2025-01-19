@@ -93,6 +93,8 @@ Implementing Language-theoretic Security (LangSec) in application development in
 - Use JWT with RS256 (RSA Signature with SHA-256) for REST API authentication with a secret key length of 2048 bits or RSA 2048 for public and private keys.
 - Follow the X.509 Version 3 Certificate format for certificates.
 
+## Automation 
+
 ### DevSecOps 
 
 Implementing DevSecOps in application development involves integrating security practices into the DevOps workflow, ensuring that security is considered at every stage of the software development lifecycle, from planning and coding to testing, deployment, and maintenance.
