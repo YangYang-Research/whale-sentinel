@@ -1,1 +1,0 @@
-# Whale Sentinel API Spec
