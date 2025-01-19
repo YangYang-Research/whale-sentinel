@@ -16,7 +16,7 @@
 
 | .No | Component                       | Description             | TechStack                | Integration Capabilities                                                                            |
 |-----|---------------------------------|-------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
-| 1   | WS Module Web Attack Detection  | Module for threat detection using AI models | Python 3.12, TensorFlow   | Integrates with the agent via APIs to detect web attacks in real-time.                             |
+| 1   | WS Module Web Attack Detection  | Module for attack detection using AI models | Python 3.12, TensorFlow   | Integrates with the agent via APIs to detect web attacks in real-time.                             |
 | 2   | WS Module Logg                  | Log collection module   | Golang 1.23.5            | Consumes and centralizes logs from all WS Modules for monitoring and analysis.                     |
 | 3   | WS Module Sync Configuration    | Configuration synchronization module | Golang 1.23.5            | Consumes configuration data from the backend and synchronizes it across all WS Modules and agents. |
 | 4   | Cache                           | Caching                 | Redis / AWS ElastiCache  | Stores and provides quick access to configuration data for optimized performance.                  |
