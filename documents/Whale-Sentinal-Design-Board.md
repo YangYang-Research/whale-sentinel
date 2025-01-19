@@ -20,7 +20,7 @@
 | 6       | **WS Controller**     | **WS Dashboard**                | A user-friendly frontend interface for monitoring, managing, and visualizing system data, providing real-time insights and actionable metrics. |
 | 7       |                       | **WS Controller Service**       | The backend service powering the WS Dashboard, responsible for processing requests, managing system logic, and integrating with external APIs. |
 | 8       |                       | **WS Module ELK Integration**   | A service designed to streamline the integration between WS systems and the ELK stack, ensuring seamless log forwarding, indexing, and visualization. It connects **WS Module Logg** to **Elasticsearch** via Logstash and provides dashboards and visualizations through Kibana. |
-| 9       | **Data Stores**       | **MongoDB / Amazon DynamoDB**   | A highly scalable NoSQL database solution used for storing configuration data, agent metadata, and other structured records. |
+| 9       | **Data Stores**       | **MongoDB /. Amazon DynamoDB**   | A highly scalable NoSQL database solution used for storing configuration data, agent metadata, and other structured records. |
 | 10      |                       | **Redis / AWS ElastiCache**     | A high-performance in-memory data store for caching frequently accessed data, ensuring low latency and high throughput for WS systems. |
 | 11      | **Messaging**         | **Kafka / MSK Topics**          | A distributed messaging system (Apache Kafka or Amazon MSK) used for reliable message streaming between modules and agents. |
 
@@ -33,6 +33,17 @@ The WS-Web Agent Architecture is designed for integration with web framework lik
 ## WS-Web Agent - AWS Deployment Architecture
 
 ![WS-Web Agent AWS](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
+
+### Conection table
+
+| **No.** | **Source**         | **IP**             | **Destination**            | **IP**                  | **Port** | **Protocols**   | **Purpose**                                                                 | **Number of IPs Assigned** |
+|---------|--------------------|--------------------|----------------------------|-------------------------|----------|-----------------|-----------------------------------------------------------------------------|---------------------------|
+| 1       | **WS Web Agent**    | 10.0.0.0/22        | **WS Service**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | Connection between WS Web Agent and WS Service for secure communication, enabling logging, monitoring, and web attack detection. | 1024                      |
+| 2       | **WS Service**      | 10.0.4.0/22        | **WS Controller**          | 10.0.8.0/28             | 443      | HTTPS, TLS 1.2  | Communication between WS Service and WS Controller to transmit monitoring data, system alerts, and control configurations. | 1024                      |
+| 3       | **WS Service**      | 10.0.4.0/22        | **Kafka**                  | 10.0.12.0/24            | 9080     | HTTPS, TLS 1.2  | Enable secure, high-throughput data streaming between WS Service and Kafka, ensuring reliable message queuing and processing. | 1024                      |
+| 4       | **WS Controller**   | 10.0.8.0/28        | **Database MongoDB / Amazon DynamoDB** | 10.0.16.0/24            | 27017 / 8000 | HTTPS, TLS 1.2  | Secure connection from WS Controller to the database for accessing and storing configuration, monitoring logs, and application data. | 16                        |
+| 5       | **Kafka / MSK**     | 10.0.12.0/24       | **WS Controller**          | 10.0.8.0/28             | 9080     | HTTPS, TLS 1.2  | Kafka communicates with WS Controller to push data such as logs, messages, and event triggers for further analysis and processing. | 256                       |
+| 6       | **WS Controller**   | 10.0.8.0/28        | **WS Service**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | WS Controller communicates with WS Service to manage service configurations, control system states, and update monitoring parameters. | 16                        |
 
 ## Security
 
