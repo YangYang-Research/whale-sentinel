@@ -26,6 +26,8 @@
 
 ## WS-Web Agent Architecture
 
+The WS-Web Agent Architecture is designed for integration with web framework like Flask, Spring Boot, ..., providing logging, monitoring, and security features. Following LangSec principles ensures that all input handling routines are formal language recognizers, strictly validating inputs to mitigate security risks.
+
 ![WS-Web Agent](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_Architecture.png?raw=true)
 
 ## WS-Web Agent - AWS Deployment Architecture
