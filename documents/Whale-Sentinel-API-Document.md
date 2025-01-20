@@ -31,17 +31,18 @@
 
 ### POST /api/v1/ws/controller/login
 
-- Request Body:
+#### Request Body:
 
-```
+```json
 {
   "username": "admin",
   "password": "password123",
 }
 ```
-- Response Body:
-  - Success Response:
-```
+#### Response Body:
+- Success Response:
+  
+```json
 {
   "status": "success",
   "message": "Login successful",
@@ -51,8 +52,9 @@
   }
 }
 ```
-  - Error Response (Invalid credentials example):
-```
+- Error Response (Invalid credentials):
+  
+```json
 {
   "status": "error",
   "message": "Invalid username or password",
@@ -62,21 +64,119 @@
 
 ### GET /api/v1/ws/controller/logout
 
-- Request Body:
-- Response Body:
-  - Success Response:
-  - Error Response:
- 
+#### Request Header:
+
+```http
+GET /api/v1/ws/controller/logout HTTP/1.1
+Host: localhost
+Authorization: Bearer <your_access_token>
+```
+
+#### Request Body: This API does not require a request body. The request is made with the user's authentication token in the header.
+
+#### Response Body:
+- Success Response:
+  
+```json
+{
+  "status": "success",
+  "message": "Logout successful",
+  "data": null
+}
+```
+- Error Response (Invalid or Missing Token):
+  
+```json
+{
+  "status": "error",
+  "message": "Authentication token is invalid or expired",
+  "data": null
+}
+```
+- Error Response (User Not Logged In):
+
+```json
+{
+  "status": "error",
+  "message": "User is not logged in",
+  "data": null
+}
+```
+
 ### POST /api/v1/ws/controller/agent
 
-- Request Body:
-- Response Body:
-  - Success Response:
-  - Error Response:
+#### Request Body:
+
+```json
+{
+  "agent_id": "string"  // Optional. If null, all agents will be retrieved.
+}
+```
+
+#### Response Body:
+- Success Response (Get All Agents):
+```json
+{
+  "status": "success",
+  "message": "Agents retrieved successfully",
+  "data": [
+    {
+      "agent_id": "agent-12345",
+      "name": "Agent Alpha",
+      "status": "active",
+      "created_at": "2025-01-01T12:00:00Z"
+    },
+    {
+      "agent_id": "agent-67890",
+      "name": "Agent Beta",
+      "status": "inactive",
+      "created_at": "2025-01-02T14:30:00Z"
+    }
+  ]
+}
+
+```
+- Success Response (Get Specific Agent):
+```json
+{
+  "status": "success",
+  "message": "Agent retrieved successfully",
+  "data": {
+    "agent_id": "agent-12345",
+    "name": "Agent Alpha",
+    "status": "active",
+    "created_at": "2025-01-01T12:00:00Z"
+  }
+}
+```
+- Error Response (Agent Not Found (Specific Agent)):
+ ```json
+{
+  "status": "error",
+  "message": "Agent not found",
+  "data": null
+}
+ ```
+- Error Response (Invalid Request (Malformed Body)):
+ ```json
+{
+  "status": "error",
+  "message": "Invalid request body",
+  "data": null
+}
+ ```
+-  Error Response (Server Error):
+```json
+{
+  "status": "error",
+  "message": "Internal server error",
+  "data": null
+}
+```
 
 ### POST /api/v1/ws/controller/agent/create  
 
-- Request Body:
-- Response Body:
-  - Success Response:
-  - Error Response:
+#### Request Body:
+#### Response Body:
+- Success Response:
+- Error Response:
