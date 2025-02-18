@@ -30,7 +30,13 @@ The WS-Web Agent Architecture is designed for integration with web framework lik
 
 ![WS-Web Agent](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_Architecture.png?raw=true)
 
+## WS-Deep Learning Model Attack Detection 
+
+![WS-Model Detection](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Deep_Learning_Model_Attack_Detection.png?raw=true)
+
 ## WS-Web Agent - AWS Deployment Architecture
+
+This is a detection method that using combine Convolutional Neural Network (CNN) and a family of Recurrent Neural Network (RNN) to analyze features and relationships in requests from users and predict whether they are attack or not.
 
 ![WS-Web Agent AWS](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
 
