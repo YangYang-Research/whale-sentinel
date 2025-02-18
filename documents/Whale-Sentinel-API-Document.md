@@ -123,12 +123,18 @@ Authorization: Bearer <your_access_token>
     {
       "agent_id": "agent-12345",
       "name": "Agent Alpha",
+      "platform": "Windows",
+      "ip": "127.0.0.1",
+      "port": "9768",
       "status": "active",
       "created_at": "2025-01-01T12:00:00Z"
     },
     {
       "agent_id": "agent-67890",
       "name": "Agent Beta",
+      "platform": "WebApp",
+      "ip": "127.0.0.1",
+      "port": "443",
       "status": "inactive",
       "created_at": "2025-01-02T14:30:00Z"
     }
@@ -144,6 +150,9 @@ Authorization: Bearer <your_access_token>
   "data": {
     "agent_id": "agent-12345",
     "name": "Agent Alpha",
+    "platform": "Windows",
+    "ip": "127.0.0.1",
+    "port": "9768",
     "status": "active",
     "created_at": "2025-01-01T12:00:00Z"
   }
@@ -177,6 +186,67 @@ Authorization: Bearer <your_access_token>
 ### POST /api/v1/ws/controller/agent/create  
 
 #### Request Body:
+
+```json
+{
+  "name": "string",
+  "platform": "string",  // Allowed values: Windows, Linux, WebApp, MobileApp
+  "ip": "string",
+  "port": "number",
+  "status": "string"  // Example: active, inactive, pending
+}
+```
+
 #### Response Body:
 - Success Response:
-- Error Response:
+```json
+{
+  "status": "success",
+  "message": "Agent created successfully",
+  "data": {
+    "agent_id": "agent-12345",
+    "name": "Agent Alpha",
+    "platform": "Linux",
+    "ip": "10.0.1.15",
+    "port": 8080,
+    "status": "active",
+    "created_at": "2025-02-18T12:00:00Z"
+  }
+}
+```
+
+- Error Response (Invalid Request Body):
+```json
+{
+  "status": "error",
+  "message": "Invalid request parameters",
+  "data": null
+}
+```
+
+- Error Response (Missing Required Fields):
+```json
+{
+  "status": "error",
+  "message": "Missing required fields: name, platform",
+  "data": null
+}
+```
+
+- Error Response (Duplicate Agent Name/IP):
+```json
+{
+  "status": "error",
+  "message": "Agent with this name or IP already exists",
+  "data": null
+}
+```
+
+- Error Response (Server Error)
+```json
+{
+  "status": "error",
+  "message": "Internal server error",
+  "data": null
+}
+```
