@@ -30,9 +30,9 @@ The WS-Web Agent Architecture is designed for integration with web framework lik
 
 ![WS-Web Agent](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_Architecture.png?raw=true)
 
-## WS-Deep Learning Model Attack Detection 
+## WS-Deep Learning Model Web Attack Detection 
 
-![WS-Model Detection](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Deep_Learning_Model_Attack_Detection.png?raw=true)
+![WS-Model Detection](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Deep_Learning_Model_Web_Attack_Detection.png?raw=true)
 
 ## WS-Web Agent - AWS Deployment Architecture
 

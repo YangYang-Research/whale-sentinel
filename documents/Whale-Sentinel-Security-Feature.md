@@ -1,6 +1,6 @@
 # Whale Sentinel Security Feature  
 
-## Deep Learning Model Attack Detection
+## Deep Learning Model Web Attack Detection
 
 The Whale Sentinel Security system leverages advanced **Deep Learning Models** to detect and mitigate various types of cyberattacks in real time. By continuously analyzing web traffic patterns, request payloads, and user behaviors, the system enhances security against sophisticated threats.  
 
