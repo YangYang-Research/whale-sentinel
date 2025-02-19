@@ -7,9 +7,10 @@
 | 3       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent               | Retrieves a list of registered agents within the WS Controller system.                                 | 30s         | [Specification Link] |
 | 4       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/create       | Creates a new agent within the WS Controller system for monitoring and configuration.                 | 30s         | [Specification Link] |
 | 5       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/update       | Updates configuration or status of an existing agent in the WS Controller system.                     | 30s         | [Specification Link] |
-| 6       | **WS Controller**  | **WS Controller Service**      | GET /api/v1/ws/controller/agent/configuration | Fetches the current configuration of a specific agent in the system.                                  | 30s         | [Specification Link] |
+| 6       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/configuration | Fetches the current configuration of a specific agent in the system.                                  | 30s         | [Specification Link] |
 | 7       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/configuration| Updates the configuration of a specific agent in the WS Controller system.                           | 30s         | [Specification Link] |
-| 8       | **WS Service**     | **WS Module Web Attack Detection** | POST /api/v1/ws/service/attack-detection/predict | Submits web traffic data for AI-based prediction and detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link] |
+| 8       | **WS Service**     | **WS Module Gateway Service** | POST /api/v1/ws/service/gateway | Handles incoming data from agents, validates requests, and routes them to appropriate processing modules for further analysis and execution.| 30s | [Specification Link] |
+| 9       | **WS Service**     | **WS Module Web Attack Detection** | POST /api/v1/ws/service/attack-detection/predict | Submits web traffic data for AI-based prediction and detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link] |
 
 ## HTTP Status Code
 
@@ -250,3 +251,54 @@ Authorization: Bearer <your_access_token>
   "data": null
 }
 ```
+
+### POST /api/v1/ws/controller/agent/update  
+
+#### Request Body:
+#### Response Body:
+- Success Response:
+- Error Response:
+
+### POST /api/v1/ws/controller/agent/configuration  
+
+#### Request Body:
+#### Response Body:
+- Success Response:
+- Error Response:
+
+### POST /api/v1/ws/service/gateway
+
+#### Request Body:
+
+```json
+{
+  "agent_id": "string", 
+  "rule": "object", // (WS Module Web Attack Detection, WS Module DGA Detection,...)
+  "payload": {
+    "data": "object" // Dynamic data based on request_type
+  },
+  "timestamp": "string" // ISO 8601 format (e.g., "2025-02-18T12:34:56Z")
+}
+
+#### Response Body:
+```json
+{
+  "status": "success",
+  "message": "Request processed successfully",
+  "data": {
+    "ws_module_web_attack_detection_score": 50,
+    "ws_module_dga_detection_score": 10,
+    "ws_module_common_attack_detection": {
+      "open_redirect": true,
+      "large_request": false,
+      "http_method_tampering": false,
+      "sql_injection": false,
+      "cross_site_scripting": false,
+    },
+    "hash": "917b28a070ce73b87ab92a3976bec7038aa27dff1ea56d592e19c32612c3def0",
+  },
+  "processed_at": "string" // ISO 8601 format
+}
+```
+- Success Response:
+- Error Response:

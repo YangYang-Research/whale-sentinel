@@ -17,12 +17,13 @@
 | 3       | **WS Service**        | **WS Module Web Attack Detection** | An AI-driven module designed to detect and mitigate web-based attacks in real time, offering robust protection against threats like SQL injection and XSS. |
 | 4       |                       | **WS Module Logg**              | A centralized log collection and analysis module that gathers, processes, and forwards logs to Elasticsearch for real-time monitoring and analytics. |
 | 5       |                       | **WS Module Sync Configuration** | A module ensuring real-time synchronization of configuration changes across all connected agents and systems, minimizing downtime and inconsistencies. |
-| 6       | **WS Controller**     | **WS Dashboard**                | A user-friendly frontend interface for monitoring, managing, and visualizing system data, providing real-time insights and actionable metrics. |
-| 7       |                       | **WS Controller Service**       | The backend service powering the WS Dashboard, responsible for processing requests, managing system logic, and integrating with external APIs. |
-| 8       |                       | **WS Module ELK Integration**   | A service designed to streamline the integration between WS systems and the ELK stack, ensuring seamless log forwarding, indexing, and visualization. It connects **WS Module Logg** to **Elasticsearch** via Logstash and provides dashboards and visualizations through Kibana. |
-| 9       | **Data Stores**       | **MongoDB /. Amazon DynamoDB**   | A highly scalable NoSQL database solution used for storing configuration data, agent metadata, and other structured records. |
-| 10      |                       | **Redis / AWS ElastiCache**     | A high-performance in-memory data store for caching frequently accessed data, ensuring low latency and high throughput for WS systems. |
-| 11      | **Messaging**         | **Kafka / MSK Topics**          | A distributed messaging system (Apache Kafka or Amazon MSK) used for reliable message streaming between modules and agents. |
+| 6       |                       | **WS Module Gateway Service** | A central processing module responsible for receiving, validating, and routing incoming requests from agents to the appropriate functional modules.|
+| 7       | **WS Controller**     | **WS Dashboard**                | A user-friendly frontend interface for monitoring, managing, and visualizing system data, providing real-time insights and actionable metrics. |
+| 8       |                       | **WS Controller Service**       | The backend service powering the WS Dashboard, responsible for processing requests, managing system logic, and integrating with external APIs. |
+| 9       |                       | **WS Module ELK Integration**   | A service designed to streamline the integration between WS systems and the ELK stack, ensuring seamless log forwarding, indexing, and visualization. It connects **WS Module Logg** to **Elasticsearch** via Logstash and provides dashboards and visualizations through Kibana. |
+| 10       | **Data Stores**       | **MongoDB /. Amazon DynamoDB**   | A highly scalable NoSQL database solution used for storing configuration data, agent metadata, and other structured records. |
+| 11      |                       | **Redis / AWS ElastiCache**     | A high-performance in-memory data store for caching frequently accessed data, ensuring low latency and high throughput for WS systems. |
+| 12      | **Messaging**         | **Kafka / MSK Topics**          | A distributed messaging system (Apache Kafka or Amazon MSK) used for reliable message streaming between modules and agents. |
 
 ## WS-Web Agent Architecture
 

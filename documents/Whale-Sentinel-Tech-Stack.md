@@ -16,11 +16,12 @@
 
 | .No | Component                       | Description             | TechStack                | Integration Capabilities                                                                            |
 |-----|---------------------------------|-------------------------|--------------------------|----------------------------------------------------------------------------------------------------|
-| 1   | WS Module Web Attack Detection  | Module for attack detection using AI models | Python 3.12, TensorFlow   | Integrates with the agent via APIs to detect web attacks in real-time.                             |
+| 1   | WS Module Web Attack Detection  | Module for web attack detection using AI models | Python 3.12, TensorFlow   | Integrates with the gateway via APIs to detect web attacks in real-time.                             |
 | 2   | WS Module Logg                  | Log collection module   | Golang 1.23.5            | Consumes and centralizes logs from all WS Modules for monitoring and analysis.                     |
 | 3   | WS Module Sync Configuration    | Configuration synchronization module | Golang 1.23.5            | Consumes configuration data from the backend and synchronizes it across all WS Modules and agents. |
 | 4   | Cache                           | Caching                 | Redis / AWS ElastiCache  | Stores and provides quick access to configuration data for optimized performance.                  |
 | 5   | Event Message                   | Streaming               | Apache Kafka 3.9.0 / AWS MSK | Streams real-time data between WS Modules and the backend for efficient communication and updates. |
+| 6   | WS Module Gateway Service       | Module for receive and route request from WS Agent to specific WS module | Golang 1.23.5 | Integrates with the agent via APIs. |
 
 
 ## Whale Sentinel Agent 
