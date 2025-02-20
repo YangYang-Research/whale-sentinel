@@ -279,8 +279,10 @@ Authorization: Bearer <your_access_token>
   },
   "timestamp": "string" // ISO 8601 format (e.g., "2025-02-18T12:34:56Z")
 }
+```
 
 #### Response Body:
+- Success Response:
 ```json
 {
   "status": "success",
@@ -300,5 +302,11 @@ Authorization: Bearer <your_access_token>
   "processed_at": "string" // ISO 8601 format
 }
 ```
-- Success Response:
 - Error Response:
+```json
+{
+  "status": "error",
+  "message": "Invalid request format or missing required fields",
+  "error_code": 400
+}
+```
