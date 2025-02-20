@@ -1,0 +1,3 @@
+[submodule "whale-sentinel-service"]
+	path = whale-sentinel-service
+	url = https://github.com/noobpk/whale-sentinel-service
