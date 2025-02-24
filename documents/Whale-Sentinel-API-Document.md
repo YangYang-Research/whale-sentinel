@@ -10,7 +10,7 @@
 | 6       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/configuration | Fetches the current configuration of a specific agent in the system.                                  | 30s         | [Specification Link] |
 | 7       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/configuration| Updates the configuration of a specific agent in the WS Controller system.                           | 30s         | [Specification Link] |
 | 8       | **WS Service**     | **WS Module Gateway Service** | POST /api/v1/ws/service/gateway | Handles incoming data from agents, validates requests, and routes them to appropriate processing modules for further analysis and execution.| 30s | [Specification Link] |
-| 9       | **WS Service**     | **WS Module Web Attack Detection** | POST /api/v1/ws/service/attack-detection/predict | Submits web traffic data for AI-based prediction and detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link] |
+| 9       | **WS Service**     | **WS Module Web Attack Detection** | POST /api/v1/ws/service/web-attack-detection | Submits web traffic data for AI-based prediction and detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link] |
 
 ## HTTP Status Code
 
