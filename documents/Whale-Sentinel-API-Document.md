@@ -9,9 +9,11 @@
 | 5       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/update       | Updates configuration or status of an existing agent in the WS Controller system.                     | 30s         | [Specification Link] |
 | 6       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/configuration | Fetches the current configuration of a specific agent in the system.                                  | 30s         | [Specification Link] |
 | 7       | **WS Controller**  | **WS Controller Service**      | POST /api/v1/ws/controller/agent/configuration| Updates the configuration of a specific agent in the WS Controller system.                           | 30s         | [Specification Link] |
-| 8       | **WS Service**     | **WS Module Gateway Service** | POST /api/v1/ws/service/gateway | Handles incoming data from agents, validates requests, and routes them to appropriate processing modules for further analysis and execution.| 30s | [Specification Link] |
-| 9       | **WS Service**     | **WS Module Web Attack Detection** | POST /api/v1/ws/service/web-attack-detection | Submits web traffic data for AI-based prediction and detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link](https://github.com/noobpk/whale-sentinel/issues/3) |
-| 10       | **WS Service**     | **WS Module Web Attack Detection** | GET /api/v1/ws/service/web-attack-detection/ping | This endpoint checks the status of the WS Module Web Attack Detection. | 30s         | [Specification Link](https://github.com/noobpk/whale-sentinel/issues/3) |
+| 8       | **WS Services**     | **WS Module Gateway Service** | POST /api/v1/ws/services/gateway | Handles incoming data from agents, validates requests, and routes them to appropriate processing modules for further analysis and execution.| 30s | [Specification Link] |
+| 9       | **WS Services**     | **WS Module Web Attack Detection** | POST /api/v1/ws/services/web-attack-detection | Submits web traffic data for AI-based prediction and detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link](https://github.com/noobpk/whale-sentinel/issues/3) |
+| 10       | **WS Services**     | **WS Module Web Attack Detection** | GET /api/v1/ws/services/web-attack-detection/ping | This endpoint checks the status of the WS Module Web Attack Detection. | 30s         | [Specification Link](https://github.com/noobpk/whale-sentinel/issues/3) |
+| 11       | **WS Services**     | **WS Module Common Attack Detection** | GET /api/v1/ws/services/common-attack-detection | Submits web traffic data for Rule-based detection of potential web attacks (e.g., SQL Injection, XSS). | 30s         | [Specification Link] |
+
 
 ## HTTP Status Code
 
