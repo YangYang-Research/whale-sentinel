@@ -48,11 +48,11 @@ This is a detection method that using combine Convolutional Neural Network (CNN)
 | **No.** | **Source**         | **IP**             | **Destination**            | **IP**                  | **Port** | **Protocols**   | **Purpose**                                                                 | **Number of IPs Assigned** |
 |---------|--------------------|--------------------|----------------------------|-------------------------|----------|-----------------|-----------------------------------------------------------------------------|---------------------------|
 | 1       | **WS Web Agents**    | 10.0.0.0/22        | **WS Services**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | Connection between WS Web Agents and WS Services for secure communication, enabling logging, monitoring, and web attack detection, ... | 1024                      |
-| 2       | **WS Services**      | 10.0.4.0/22        | **WS Controllers**          | 10.0.8.0/28             | 443      | HTTPS, TLS 1.2  | Communication between WS Service and WS Controller to transmit monitoring data, system alerts, and control configurations. | 1024                      |
+| 2       | **WS Services**      | 10.0.4.0/22        | **WS Controllers**          | 10.0.8.0/22             | 443      | HTTPS, TLS 1.2  | Communication between WS Service and WS Controller to transmit monitoring data, system alerts, and control configurations. | 1024                      |
 | 3       | **WS Services**      | 10.0.4.0/22        | **Kafka**                  | 10.0.12.0/24            | 9080     | HTTPS, TLS 1.2  | Enable secure, high-throughput data streaming between WS Service and Kafka, ensuring reliable message queuing and processing. | 1024                      |
-| 4       | **WS Controllers**   | 10.0.8.0/28        | **Database MongoDB / Amazon DynamoDB** | 10.0.16.0/24            | 27017 / 8000 | HTTPS, TLS 1.2  | Secure connection from WS Controller to the database for accessing and storing configuration, monitoring logs, and application data. | 16                        |
-| 5       | **Kafka / MSK**     | 10.0.12.0/24       | **WS Controllers**          | 10.0.8.0/28             | 9080     | HTTPS, TLS 1.2  | Kafka communicates with WS Controller to push data such as logs, messages, and event triggers for further analysis and processing. | 256                       |
-| 6       | **WS Controllers**   | 10.0.8.0/28        | **WS Service**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | WS Controller communicates with WS Service to manage service configurations, control system states, and update monitoring parameters. | 16                        |
+| 4       | **WS Controllers**   | 10.0.8.0/22        | **Database MongoDB / Amazon DynamoDB** | 10.0.16.0/24            | 27017 / 8000 | HTTPS, TLS 1.2  | Secure connection from WS Controller to the database for accessing and storing configuration, monitoring logs, and application data. | 1024                        |
+| 5       | **Kafka / MSK**     | 10.0.12.0/24       | **WS Controllers**          | 10.0.8.0/22             | 9080     | HTTPS, TLS 1.2  | Kafka communicates with WS Controller to push data such as logs, messages, and event triggers for further analysis and processing. | 256                       |
+| 6       | **WS Controllers**   | 10.0.8.0/22        | **WS Service**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | WS Controller communicates with WS Service to manage service configurations, control system states, and update monitoring parameters. | 1024                        |
 
 ## Security
 
@@ -99,6 +99,13 @@ Implementing Language-theoretic Security (LangSec) in application development in
 - Use SHA256withRSA for request signing.
 - Use JWT with RS256 (RSA Signature with SHA-256) for REST API authentication with a secret key length of 2048 bits or RSA 2048 for public and private keys.
 - Follow the X.509 Version 3 Certificate format for certificates.
+
+### Key Management
+
+|AWS Service | Key Name - Alias | Type | Alogrithm | Rotation (days) | Description |
+|------------|------|----------|----------|----------|-------------|
+|aws/secretsmanager |aws/whale-sentinel/internal-services| API Key | N/A | 365 | API key used for authentication between internal whale-sentinel services to ensure secure service-to-service communication. | 
+| aws/kms | aws/whale-sentinel/rds | Encryption & descryption key | AES-256 | 365 | RDS encryption and descryption |
 
 ## Automation 
 
