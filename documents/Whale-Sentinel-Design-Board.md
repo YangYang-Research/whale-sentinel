@@ -1,8 +1,12 @@
 # Whale Sentinel (WS) Design Board
 
-## Whale Sentinel Solution
+## Whale Sentinel System Context
 
+👉 [System Context](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-System-Context.md)
 
+## Whale Sentinel Process Flow
+
+👉 [Process Flow](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Process-Flow.md)
 
 ## High Level Architecture
 
@@ -26,13 +30,12 @@
 | 13      |                       | **Redis / AWS ElastiCache**     | A high-performance in-memory data store for caching frequently accessed data, ensuring low latency and high throughput for WS systems. |
 | 14      | **Messaging**         | **Kafka / MSK Topics**          | A distributed messaging system (Apache Kafka or Amazon MSK) used for reliable message streaming between modules and agents. |
 
-
 ## Whale Sentinel Rule Design
 
 | Key | Value |
 | --- | ----- |
-| ws-agent-* | [#Whale Sentinel Agent Rule](./Whale-Sentinel-Rule-Design.md) |
-| ws-common-attack-detection-service | [#Whale Sentinel Services Rule](./Whale-Sentinel-Rule-Design.md) |
+| ws-agent-* | [Agent Rule](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Rule-Design.md#whale-sentinel-agent-configuration) |
+| ws-common-attack-detection-service | [Services Rule](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Rule-Design.md#whale-sentinel-agent-configuration) |
 
 ## WS-Web Agent Architecture
 
