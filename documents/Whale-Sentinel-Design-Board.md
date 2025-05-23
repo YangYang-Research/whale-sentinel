@@ -35,7 +35,7 @@
 | Key | Value |
 | --- | ----- |
 | ws-agent-* | [Agent Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-agent-profile) |
-| ws-common-attack-detection-service | [Services Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-agent-profile) |
+| ws-common-attack-detection-service | [Services Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-service-profile) |
 
 ## WS-Web Agent Architecture
 
