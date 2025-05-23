@@ -9,6 +9,7 @@
 | | xss_patterns | array | string | M | XSS pattern |
 | | sql_patterns | array | string | M | XSS pattern |
 | | http_verb_patterns | string | string | M | HTTP Verb Tampering pattern |
+| | max_size_request | number | number | M | Max size of request content |
 | | patching_patterns | array | string | M | patching pattern for 0day attack |
 
 - Example ws-common-attack-detection configuration
@@ -27,6 +28,7 @@
       "..."
     ],
     "http_verb_patterns": "(?i)(HEAD|OPTIONS|TRACE|CONNECT|PROPFIND|PROPPATCH|MKCOL|COPY|MOVE|LOCK|UNLOCK)",
+    "max_size_request" : "2048",
     "patching_patterns: [
       "^(?!.*(\\.\\.|\\/\|\\\\)).*$"
     ]
@@ -38,8 +40,8 @@
 
 | Group | Rule | Value | Type | M/O | Description | 
 | ---------- | ---- | ----- | ---- | ----| ----------- |
-| | run_mode | lite/monitor/protect | string | M | Current run mode of agent |
-| | las_mode | lite/monitor/protect | string | M | Last run mode of agent |
+| | running_mode | lite/monitor/protect | string | M | Current run mode of agent |
+| | last_run_mode | lite/monitor/protect | string | M | Last run mode of agent |
 | ws_module_web_attack_detection | enable | true/false | boolean | M | Enable/disable this rule |
 | ws_module_web_attack_detection | detect_header | true/false | boolean | M | Default detect only request body & request params |
 | ws_module_dga_detection | enable | true/false | boolean | M | Enable/disable this rule |
@@ -48,8 +50,8 @@
 | ws_module_common_attack_detection | detect_http_large_request | true/false | boolean | M | Enable/disable detect http large request |
 | ws_module_common_attack_detection | detect_sql_injection | true/false | boolean | M | Enable/disable detect sql injection attack |
 | ws_module_common_attack_detection | detect_http_verb_tampering | true/false | boolean | M | Enable/disable detect http ver tampering attack |
-| | lite_log_sync | true/false | boolean | M | Status of lite log is sent or not |
-| | lite_log_status | success/fail | string | M | Status of lite log is sent success or not |
+| | lite_mode_data_is_synchronized | true/false | boolean | M | Status of data is synchronize or not |
+| | lite_mode_data_synchronize_status | success/progress/fail | string | M | Status of process synchronize is success or not |
 
 
 - Example Agent Configuration
@@ -57,10 +59,10 @@
 ```
 {
     "rules": {
-        "run_mode: "monitor",
-        "last_mode: "lite",
-        "lite_log_sync": false,
-        "lite_log_status: "fail",
+        "running_mode": "monitor",
+        "last_run_mode": "lite",
+        "lite_mode_data_is_synchronized": false,
+        "lite_mode_data_synchronize_status: "fail",
         "ws_module_web_attack_detection": {
             "enable": true,
             "detect_header": false
