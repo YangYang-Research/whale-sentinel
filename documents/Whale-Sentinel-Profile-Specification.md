@@ -63,8 +63,8 @@
 | `ws_module_common_attack_detection`| `detect_http_verb_tampering`        | `true` / `false`                             | boolean | M   | Enable detection of non-standard or manipulated HTTP methods.               |
 | –                                  | `lite_mode_data_is_synchronized`    | `true` / `false`                             | boolean | M   | Indicates whether data in lite mode is currently synchronized.              |
 | –                                  | `lite_mode_data_synchronize_status` | `success` / `progress` / `fail`              | string  | M   | Synchronization progress status for lite mode data.                         |
-| `secure_response_header`           | `enable`                            | `true` / `false`                             | boolean | M   | Enable or disable automatic secure HTTP response header injection.          |
-| `secure_response_header`           | `headers`                           | key-value object                             | object  | M   | Full configuration of secure response headers to be applied dynamically.    |
+| `secure_response_headers`           | `enable`                            | `true` / `false`                             | boolean | M   | Enable or disable automatic secure HTTP response header injection.          |
+| `secure_response_headers`           | `headers`                           | key-value object                             | object  | M   | Full configuration of secure response headers to be applied dynamically.    |
 
 ## Notes
 
@@ -97,7 +97,7 @@
       "detect_sql_injection": true,
       "detect_http_verb_tampering": true
     },
-    "secure_response_header": {
+    "secure_response_headers": {
       "enable": true,
       "headers": {
         "Server": "Whale Sentinel",
