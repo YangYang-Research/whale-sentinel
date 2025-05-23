@@ -30,12 +30,12 @@
 | 13      |                       | **Redis / AWS ElastiCache**     | A high-performance in-memory data store for caching frequently accessed data, ensuring low latency and high throughput for WS systems. |
 | 14      | **Messaging**         | **Kafka / MSK Topics**          | A distributed messaging system (Apache Kafka or Amazon MSK) used for reliable message streaming between modules and agents. |
 
-## Whale Sentinel Rule Design
+## Whale Sentinel Profile Design
 
 | Key | Value |
 | --- | ----- |
-| ws-agent-* | [Agent Rule](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Rule-Design.md#whale-sentinel-agent-configuration) |
-| ws-common-attack-detection-service | [Services Rule](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Rule-Design.md#whale-sentinel-agent-configuration) |
+| ws-agent-* | [Agent Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Design.md#whale-sentinel-agent-profile) |
+| ws-common-attack-detection-service | [Services Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Design.md#whale-sentinel-agent-profile) |
 
 ## WS-Web Agent Architecture
 

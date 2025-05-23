@@ -1,10 +1,10 @@
-# Whale Sentinel Configuration Design
+# Whale Sentinel Profile Design
 
-## Whale Sentinel Service Configuration
+## Whale Sentinel Service Profile
 
 ### ws-common-attack-detection
 
-| Group | Rule | Value | Type | M/O | Description | 
+| Group | Configuration | Value | Type | M/O | Description | 
 | ---------- | ---- | ----- | ---- | ----| ----------- |
 | | xss_patterns | array | string | M | XSS pattern |
 | | sql_patterns | array | string | M | XSS pattern |
@@ -12,11 +12,11 @@
 | | max_size_request | number | number | M | Max size of request content |
 | | patching_patterns | array | string | M | patching pattern for 0day attack |
 
-- Example ws-common-attack-detection configuration
+- Example ws-common-attack-detection profile
 
 ```
 {
-  "rules": {
+  "profile": {
     "xss_patterns": [
       "(?:https?://|//)[^\\s/]+\\.js",
       "((%3C)|<)((%2F)|/)*[a-z0-9%]+((%3E)|>)",
@@ -36,9 +36,9 @@
 }
 ```
 
-## Whale Sentinel Agent Configuration
+## Whale Sentinel Agent Profile
 
-| Group | Rule | Value | Type | M/O | Description | 
+| Group | Configuration | Value | Type | M/O | Description | 
 | ---------- | ---- | ----- | ---- | ----| ----------- |
 | | running_mode | lite/monitor/protect | string | M | Current run mode of agent |
 | | last_run_mode | lite/monitor/protect | string | M | Last run mode of agent |
@@ -54,11 +54,11 @@
 | | lite_mode_data_synchronize_status | success/progress/fail | string | M | Status of process synchronize is success or not |
 
 
-- Example Agent Configuration
+- Example Agent Profile
  
 ```
 {
-    "rules": {
+    "profile": {
         "running_mode": "monitor",
         "last_run_mode": "lite",
         "lite_mode_data_is_synchronized": false,
