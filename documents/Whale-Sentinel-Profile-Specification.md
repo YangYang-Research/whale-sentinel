@@ -55,8 +55,10 @@
 | –                                  | `last_run_mode`                     | `lite` / `monitor` / `protect`               | string  | M   | The previous execution mode before the current session.                    |
 | `ws_module_web_attack_detection`   | `enable`                            | `true` / `false`                             | boolean | M   | Enable or disable the Web Attack Detection module.                          |
 | `ws_module_web_attack_detection`   | `detect_header`                     | `true` / `false`                             | boolean | M   | Include request headers in detection (default is body and parameters only). |
+| `ws_module_web_attack_detection`   | `threshold`                         | `number`                                     | number | M   | Acceptance threshold of prediction |
 | `ws_module_dga_detection`          | `enable`                            | `true` / `false`                             | boolean | M   | Enable or disable the DGA (Domain Generation Algorithm) detection module.   |
-| `ws_module_common_attack_detection`| `enable`                            | `true` / `false`                             | boolean | M   | Enable or disable the Common Attack Detection module.                       |
+| `ws_module_dga_detection`          | `enable`                            | `true` / `false`                             | boolean | M   | Enable or disable the DGA (Domain Generation Algorithm) detection module.   |
+| `ws_module_common_attack_detection`| `enable`                            | `number`                                     | boolean | M   | Acceptance threshold of prediction.                       |
 | `ws_module_common_attack_detection`| `detect_cross_site_scripting`       | `true` / `false`                             | boolean | M   | Enable detection of Cross-Site Scripting (XSS) attacks.                     |
 | `ws_module_common_attack_detection`| `detect_http_large_request`         | `true` / `false`                             | boolean | M   | Enable detection of HTTP requests with abnormal large payloads.             |
 | `ws_module_common_attack_detection`| `detect_sql_injection`              | `true` / `false`                             | boolean | M   | Enable detection of SQL Injection attacks.                                  |
@@ -85,10 +87,12 @@
     "lite_mode_data_synchronize_status": "fail",
     "ws_module_web_attack_detection": {
       "enable": true,
-      "detect_header": false
+      "detect_header": false,
+      "threshold": 80
     },
     "ws_module_dga_detection": {
-      "enable": true
+      "enable": true,
+      "threshold": 80
     },
     "ws_module_common_attack_detection": {
       "enable": true,
