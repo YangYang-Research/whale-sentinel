@@ -1,6 +1,0 @@
-[submodule "whale-sentinel-services"]
-	path = whale-sentinel-services
-	url = https://github.com/YangYang-Research/whale-sentinel-services
-[submodule "whale-sentinel-controllers"]
-	path = whale-sentinel-controllers
-	url = https://github.com/YangYang-Research/whale-sentinel-controllers
