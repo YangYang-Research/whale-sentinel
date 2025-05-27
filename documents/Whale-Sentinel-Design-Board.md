@@ -41,17 +41,17 @@
 
 The WS-Web Agent Architecture is designed for integration with web framework like Flask, Spring Boot, ..., providing logging, monitoring, and security features. Following LangSec principles ensures that all input handling routines are formal language recognizers, strictly validating inputs to mitigate security risks.
 
-![WS-Web Agent](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_Architecture.png?raw=true)
+![WS-Web Agent](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Web_Agent_Architecture.png?raw=true)
 
 ## WS-Deep Learning Model Web Attack Detection 
 
-![WS-Model Detection](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Deep_Learning_Model_Web_Attack_Detection.png?raw=true)
+![WS-Model Detection](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Deep_Learning_Model_Attack_Detection.png?raw=true)
 
 ## WS-Web Agent - AWS Deployment Architecture
 
 This is a detection method that using combine Convolutional Neural Network (CNN) and a family of Recurrent Neural Network (RNN) to analyze features and relationships in requests from users and predict whether they are attack or not.
 
-![WS-Web Agent AWS](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
+![WS-Web Agent AWS](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
 
 ### Conection table
 
@@ -123,10 +123,10 @@ Implementing Language-theoretic Security (LangSec) in application development in
 
 Implementing DevSecOps in application development involves integrating security practices into the DevOps workflow, ensuring that security is considered at every stage of the software development lifecycle, from planning and coding to testing, deployment, and maintenance.
 
-![DevSecOps](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_DevSecOps_Architecture.png?raw=true)
+![DevSecOps](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_DevSecOps_Architecture.png?raw=true)
 
 ### MLSecOps
 
 Implementing MLSecOps in developing and training AI models involves integrating security practices into the machine learning lifecycle, ensuring that data, models, and infrastructure are protected at every stage, from data collection and preprocessing to model training, deployment, and monitoring.
 
-![MLSecOps](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_MLSecOps_Architecture.png?raw=true)
+![MLSecOps](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_MLSecOps_Architecture.png?raw=true)
