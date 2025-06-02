@@ -1,6 +1,6 @@
 # Whale Sentinel Process Flow
 
-## Services - Managenent
+## Controllers - Managenent
 
 ![Management](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Management.png?raw=true)
 
