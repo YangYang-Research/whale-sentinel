@@ -1,5 +1,9 @@
 # Whale Sentinel (WS) Design Board
 
+## Whale Sentinel First Design
+
+👉 [First Design](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-First-Design-Board.md)
+
 ## Whale Sentinel System Context
 
 👉 [System Context](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-System-Context.md)
@@ -10,7 +14,7 @@
 
 ## High Level Architecture
 
-![High Level Architecture](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/WS_High_Level_Architecture.png?raw=true)
+![High Level Architecture](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
 
 ### Scopes
 
