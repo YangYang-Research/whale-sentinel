@@ -2,13 +2,19 @@
 
 ## WS - First Design
 
+First Design is the basic design document of Whale Sentinel, which helps users understand how this web security system works.
+
 👉 [First Design](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-First-Design-Board.md)
 
 ## WS - System Context
 
+The System Context documentation provides an overview of how Whale Sentinel works.
+
 👉 [System Context](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-System-Context.md)
 
 ## WS - Process Flow
+
+The Process Flow document details how Whale Sentinel processes data and detects security threats in real-time.
 
 👉 [Process Flow](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Process-Flow.md)
 
