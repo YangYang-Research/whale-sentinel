@@ -10,7 +10,7 @@
 
 ## Services - Cache Query
 
-![Cache Query](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Cache%20Query.png?raw=true)
+![Cache Query](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Cachhing.png?raw=true)
 
 ## Service - Gateway 
 
