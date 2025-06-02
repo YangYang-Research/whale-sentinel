@@ -42,6 +42,6 @@ This solution provides comprehensive runtime protection features, ensuring that 
 
 ## Overall Design
 
-![Overall](https://github.com/noobpk/whale-sentinel/blob/main/diagrams/Whale-Sentinel-Overall-Design.png?raw=true)
+![Overall](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Overall_Design.png?raw=true)
 
 ## References
