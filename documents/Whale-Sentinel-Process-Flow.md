@@ -28,6 +28,6 @@
 
 ![Protection Mode](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Agent%20-%20Protection%20Mode.png?raw=true)
 
-## Agents - Synchronize Profile
+## Agents - Synchronize Metadata
 
 ![Sync Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Agent%20-%20Synchronize%20Profile.png?raw=true)
