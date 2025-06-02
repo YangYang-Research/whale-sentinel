@@ -1,22 +1,22 @@
 # Whale Sentinel (WS) Design Board
 
-## Whale Sentinel First Design
+## WS - First Design
 
 👉 [First Design](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-First-Design-Board.md)
 
-## Whale Sentinel System Context
+## WS - System Context
 
 👉 [System Context](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-System-Context.md)
 
-## Whale Sentinel Process Flow
+## WS - Process Flow
 
 👉 [Process Flow](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Process-Flow.md)
 
-## High Level Architecture
+## WS - High Level Architecture
 
-![High Level Architecture](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
+![High Level Architecture](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_High_Level_Architecture.png?raw=true)
 
-### Scopes
+## WS - Detail System
 
 | **No.** | **System**            | **Service Name**                 | **Description**                                                                                           |
 |---------|-----------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------|
@@ -34,30 +34,30 @@
 | 13      |                       | **Redis / AWS ElastiCache**     | A high-performance in-memory data store for caching frequently accessed data, ensuring low latency and high throughput for WS systems. |
 | 14      | **Messaging**         | **Kafka / MSK Topics**          | A distributed messaging system (Apache Kafka or Amazon MSK) used for reliable message streaming between modules and agents. |
 
-## Whale Sentinel Profile Specification
+## WS - Profile Specification
 
 | Key | Value |
 | --- | ----- |
 | ws-agent-* | [Agent Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-agent-profile) |
 | ws-common-attack-detection-service | [Services Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-service-profile) |
 
-## WS-Web Agent Architecture
+## WS - Web Agent Architecture
 
 The WS-Web Agent Architecture is designed for integration with web framework like Flask, Spring Boot, ..., providing logging, monitoring, and security features. Following LangSec principles ensures that all input handling routines are formal language recognizers, strictly validating inputs to mitigate security risks.
 
 ![WS-Web Agent](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Web_Agent_Architecture.png?raw=true)
 
-## WS-Deep Learning Model Web Attack Detection 
+## WS - Deep Learning Model Web Attack Detection 
 
 ![WS-Model Detection](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Deep_Learning_Model_Attack_Detection.png?raw=true)
 
-## WS-Web Agent - AWS Deployment Architecture
+## WS - Web Agent - AWS Deployment Architecture
 
 This is a detection method that using combine Convolutional Neural Network (CNN) and a family of Recurrent Neural Network (RNN) to analyze features and relationships in requests from users and predict whether they are attack or not.
 
 ![WS-Web Agent AWS](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Web_Agent_AWS_Deployment_Architecture.png?raw=true)
 
-### Conection table
+## WS - Conection table
 
 | **No.** | **Source**         | **IP**             | **Destination**            | **IP**                  | **Port** | **Protocols**   | **Purpose**                                                                 | **Number of IPs Assigned** |
 |---------|--------------------|--------------------|----------------------------|-------------------------|----------|-----------------|-----------------------------------------------------------------------------|---------------------------|
@@ -68,7 +68,7 @@ This is a detection method that using combine Convolutional Neural Network (CNN)
 | 5       | **Kafka / MSK**     | 10.0.12.0/24       | **WS Controllers**          | 10.0.8.0/22             | 9080     | HTTPS, TLS 1.2  | Kafka communicates with WS Controller to push data such as logs, messages, and event triggers for further analysis and processing. | 256                       |
 | 6       | **WS Controllers**   | 10.0.8.0/22        | **WS Service**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | WS Controller communicates with WS Service to manage service configurations, control system states, and update monitoring parameters. | 1024                        |
 
-## Security
+## WS - Security SDLC
 
 ### Application
 
