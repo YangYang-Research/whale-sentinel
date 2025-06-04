@@ -8,9 +8,13 @@
 
 ![Log Monitor](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Log%20Monitor.png?raw=true)
 
-## Services - Cache Query
+## Services - Caching Profile
 
-![Cache Query](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Cachhing.png?raw=true)
+![Caching Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Caching%20Profile.png?raw=true)
+
+## Services - Synchronize Profile
+
+![Synchronize Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Service%20-%20Synchronize%20Profile.png?raw=true)
 
 ## Service - Gateway 
 
@@ -30,4 +34,4 @@
 
 ## Agents - Synchronize Metadata
 
-![Sync Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Agent%20-%20Synchronize%20Profile.png?raw=true)
+![Sync Metadata](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_Process_Flow-WS%20Agent%20-%20Synchronize%20Metadata.png?raw=true)
