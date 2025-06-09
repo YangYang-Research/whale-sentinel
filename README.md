@@ -20,7 +20,9 @@ The Whale-Sentinel-Design-Board.md document provides an overview of the Whale Se
 
 This document serves as a foundational guide before diving into more detailed aspects of the system. You can access it [here](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Design-Board.md).
 
-## Whale Sentinel Components
+## Whale Sentinel Roadmap
+
+Whale Sentinel has other repositories, check them out:
 
 🖥️ [WS-Controllers](https://github.com/YangYang-Research/whale-sentinel-controllers)
 
