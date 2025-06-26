@@ -4,23 +4,23 @@
 
 First Design is the basic design document of Whale Sentinel, which helps users understand how this web security system works.
 
-👉 [First Design](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-First-Design-Board.md)
+👉 [First Design](Whale-Sentinel-First-Design-Board.md)
 
 ## WS - System Context
 
 The System Context documentation provides an overview of how Whale Sentinel works.
 
-👉 [System Context](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-System-Context.md)
+👉 [System Context](Whale-Sentinel-System-Context.md)
 
 ## WS - Process Flow
 
 The Process Flow document details how Whale Sentinel processes data and detects security threats in real-time.
 
-👉 [Process Flow](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Process-Flow.md)
+👉 [Process Flow](Whale-Sentinel-Process-Flow.md)
 
 ## WS - High Level Architecture
 
-![High Level Architecture](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_High_Level_Architecture.png?raw=true)
+![High Level Architecture](Whale_Sentinel_High_Level_Architecture.png?raw=true)
 
 ## WS - Detail System
 
@@ -44,8 +44,8 @@ The Process Flow document details how Whale Sentinel processes data and detects 
 
 | Key | Value |
 | --- | ----- |
-| ws-agent-* | [Agent Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-agent-profile) |
-| ws-common-attack-detection-service | [Services Profile](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Profile-Specification.md#whale-sentinel-service-profile) |
+| ws-agent-* | [Agent Profile](Whale-Sentinel-Profile-Specification.md#whale-sentinel-agent-profile) |
+| ws-common-attack-detection-service | [Services Profile](Whale-Sentinel-Profile-Specification.md#whale-sentinel-service-profile) |
 
 ## WS - Web Agent Architecture
 
