@@ -1,40 +1,144 @@
-# Whale Sentinel (WS)
+# 🐋 Whale Sentinel (WS)
 
 ## Introduction
 
-Whale Sentinel is a cybersecurity solution that provides deep protection features for web applications, mobile apps, and various other platforms. Leveraging AI technology, Whale Sentinel quickly and effectively detects attacks. With a user-friendly interface, high customization capabilities, and seamless integration into existing systems, Whale Sentinel not only delivers peace of mind but also optimizes the security experience for users. It is the top choice for businesses aiming to safeguard their data in today’s digital age.
+**Whale Sentinel** is a comprehensive cybersecurity platform designed to **protect modern applications**—from web to mobile and endpoint environments—against a wide range of cyber threats. By combining **AI-powered detection**, **real-time monitoring**, and **modular components**, Whale Sentinel gives developers and security teams a proactive edge against malicious attacks.
 
-## Getting Started with the Project
+Whether you're a startup scaling fast or an enterprise securing sensitive operations, Whale Sentinel offers a **plug-and-play**, **highly customizable** solution that’s both **developer-friendly** and **robust in protection**.
 
-The Whale-Sentinel-Design-Board.md document provides an overview of the Whale Sentinel (WS) architecture, helping users understand how this web security system operates and how to deploy it effectively. By reading this document, you will:
+---
 
-- Understand the overall architecture of Whale Sentinel, including its key components and interactions.
+## 🚨 Why Whale Sentinel?
 
-- Learn about the Web Agent, its integration with Flask, Spring Boot, and other frameworks for monitoring and security.
+Modern applications face evolving threats: SQL injections, bot traffic, logic abuse, DGA-based attacks, and more. Whale Sentinel addresses these challenges by:
 
-- Explore security modules, such as SQL injection detection, XSS protection, DGA detection, and other attack prevention mechanisms.
+- 🧠 Leveraging **AI-driven analysis** for smarter, faster detection  
+- 🔐 Providing **layered protection** from the edge to the backend  
+- 🛠️ Supporting **framework-level integration** (e.g., Flask, Spring Boot)  
+- 📈 Enabling **centralized monitoring & threat correlation**  
+- ⚙️ Allowing **extensive customization** with minimal configuration  
 
-- Discover the data storage and processing system, utilizing MongoDB, OpenSearch, and Redis for efficient security analysis.
+---
 
-- See how AI is applied to detect and mitigate web attacks in real time.
+## 🛡️ Solution Modules & Capabilities
 
-This document serves as a foundational guide before diving into more detailed aspects of the system. You can access it [here](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Design-Board.md).
+### 🌐 Web Application Protection
 
-## Whale Sentinel Roadmap
+Protect your APIs, websites, and backend services from critical vulnerabilities:
 
-Whale Sentinel has other repositories, check them out:
+| Threat Type                        | Detection Method               | AI/ML Enhanced     | Protection Level   |
+|-----------------------------------|--------------------------------|--------------------|--------------------|
+| **SQL Injection (SQLi)**          | Pattern & behavior analysis    | ✅ Deep Learning    | 🔒 High            |
+| **Cross-Site Scripting (XSS)**    | Pattern & behavior analysis    | ✅ Deep Learning    | 🔒 High            |
+| **Command Injection (CMDi)**      | Pattern & behavior analysis            | ✅ Deep Learning    | 🔒 High            |
+| **Local File Inclusion (LFi)**    | Pattern & behavior analysis       | ✅ Deep Learning    | 🔒 High            |
+| **Domain Generation Algorithm (DGA)** | Behavior analysis     | ✅ Deep Learning   | 🔒 High     |
+| **HTTP Large Requests**           | Payload size & entropy check   | ❌                  | 🟡 Medium          |
+| **HTTP Verb Tampering**           | Method validation layer        | ❌                  | 🟡 Medium          |
+| **Insecure Redirects**            | Redirect sanitization          | ❌                  | 🟢 Essential          |
+| **Insecure File Uploads**         | MIME & file type validation    | ❌                  | 🟡 Medium          |
+| **Unknown Exploit Patching**      | Pattern & behavior analysis | ✅ Deep Learning  | 🔒 High            |
+| **Secure Response Headers**       | HTTP header hardening          | ❌                  | 🟢 Essential        |
+| **Request Rate Limiting**         | IP/session throttling          | ❌                  | 🟢 Essential        |
 
-🖥️ [WS-Controllers](https://github.com/YangYang-Research/whale-sentinel-controllers)
+> Supports integrations with Web framework, Flask, Spring Boot, and more.
 
-⚙️ [WS-Services](https://github.com/YangYang-Research/whale-sentinel-services)
+---
 
-👻 [WS-Agents](https://github.com/YangYang-Research/whale-sentinel-agents)
+### 🔍 Legend
 
-## Contributing
+- **Detection Method**: Shows the primary technique used to detect the threat.
+- **AI/ML Enhanced**: Whether the detection leverages machine learning or deep learning.
+- **Protection Level**:
+  - 🔒 **High**: Near real-time detection and automatic mitigation
+  - 🟡 **Medium**: Rule-based or threshold-based control
+  - 🟢 **Essential**: Security best practices to reduce risk surface
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+---
 
-## License
+### 📱 Mobile App Protection *(Coming Soon)*
 
-`Whale Sentinel` was created by lethanhphuc aka [noobpk](https://github.com/noobpk). It is licensed under the terms of the MIT license.
+- Emulator and root detection  
+- Secure data storage enforcement  
+- In-app runtime behavior monitoring  
+- Network traffic anomaly detection  
 
+---
+
+### 💻 Endpoint Protection *(Coming Soon)*
+
+- Behavioral anomaly detection  
+- File system & process integrity monitoring  
+- Real-time response with threat intelligence  
+
+---
+
+## 🚀 Getting Started
+
+To learn how Whale Sentinel works under the hood and how to deploy it in your stack, check out the [Whale Sentinel Design Board](https://github.com/YangYang-Research/whale-sentinel/blob/main/documents/Whale-Sentinel-Design-Board.md).
+
+You’ll learn:
+
+- 📚 WS architecture and how the components work together
+- 🧩 How to integrate WS Web Agent with frameworks like Flask/Spring
+- 🔬 Detection logic for SQLi, XSS, DGA, and more
+- 💾 How logs and data are processed with OpenSearch, MongoDB, and Redis
+- 🧠 Real-world use of AI to detect and react to attacks in real time
+
+---
+
+## 📦 Whale Sentinel Ecosystem
+
+Whale Sentinel is composed of multiple modular repositories:
+
+- 🖥️ **[WS-Controllers](https://github.com/YangYang-Research/whale-sentinel-controllers)**  
+  Dashboard, Configuration Manager, and RAG-based AI Assistant  
+
+- ⚙️ **[WS-Services](https://github.com/YangYang-Research/whale-sentinel-services)**  
+  Logging, Detection Engines, Data Flow, and Core APIs  
+
+- 👻 **[WS-Agents](https://github.com/YangYang-Research/whale-sentinel-agents)**  
+  Lightweight agents for securing your edge (Web, API, Reverse Proxy)  
+
+---
+
+## 🧠 AI-Powered RAG Assistant
+
+Whale Sentinel includes a **RAG (Retrieval-Augmented Generation) Assistant** to support:
+
+- 🤖 Log summarization and threat explanation  
+- 🔍 Retrieval of incident context from OpenSearch & MongoDB  
+- 🧭 Guided threat investigation and remediation workflows  
+
+---
+
+## 👥 Contributing
+
+We welcome contributions, suggestions, and collaborations.  
+To get started:
+
+1. Fork the repo
+2. Create a feature branch
+3. Submit a Pull Request
+
+Check out our contributing guidelines. By contributing, you agree to abide by our Code of Conduct.
+
+---
+
+## 🪪 License
+
+**Whale Sentinel** is open-source software licensed under the [MIT License](LICENSE).  
+Built by [lethanhphuc](https://github.com/noobpk) aka `noobpk`.
+
+---
+
+## 🛡️ Security & Responsible Disclosure
+
+If you discover a security issue or vulnerability, please report it responsibly:
+
+- Open a private issue on GitHub
+- Or contact the maintainers directly
+
+We take security seriously and appreciate responsible disclosures.
+
+---
