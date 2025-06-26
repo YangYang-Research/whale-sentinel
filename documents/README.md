@@ -20,7 +20,7 @@ The Process Flow document details how Whale Sentinel processes data and detects 
 
 ## WS - High Level Architecture
 
-![High Level Architecture](Whale_Sentinel_High_Level_Architecture.png?raw=true)
+![High Level Architecture](https://github.com/YangYang-Research/whale-sentinel/blob/main/diagrams/Whale_Sentinel_High_Level_Architecture.png?raw=true)
 
 ## WS - Detail System
 
