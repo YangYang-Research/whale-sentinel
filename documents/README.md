@@ -77,6 +77,49 @@ This is a detection method that using combine Convolutional Neural Network (CNN)
 | 5       | **Kafka / MSK**     | 10.0.12.0/24       | **WS Controllers**          | 10.0.8.0/22             | 9080     | HTTPS, TLS 1.2  | Kafka communicates with WS Controller to push data such as logs, messages, and event triggers for further analysis and processing. | 256                       |
 | 6       | **WS Controllers**   | 10.0.8.0/22        | **WS Service**             | 10.0.4.0/22             | 443      | HTTPS, TLS 1.2  | WS Controller communicates with WS Service to manage service configurations, control system states, and update monitoring parameters. | 1024                        |
 
+## 🧭 VPC Network Overview
+
+| VPC Name        | CIDR Block     | Total IPs (usable) |
+|-----------------|----------------|---------------------|
+| VPC Services     | `10.0.4.0/22`   | 1024 (~1019 usable) |
+| VPC Controllers  | `10.0.8.0/22`   | 1024 (~1019 usable) |
+
+---
+
+## 📐 Subnet Plan for VPC Services (`10.0.4.0/22`)
+
+| Subnet Name           | CIDR Block      | Type     | Availability Zone     | Notes                             |
+|-----------------------|------------------|----------|------------------------|-----------------------------------|
+| services-public-a     | `10.0.4.0/26`     | Public   | ap-southeast-1a        | For NAT Gateway, ALB, Bastion     |
+| services-private-a    | `10.0.4.64/26`    | Private  | ap-southeast-1a        | Application containers, EC2       |
+| services-private-b    | `10.0.4.128/26`   | Private  | ap-southeast-1b        | RDS replica, service failover     |
+| services-private-c    | `10.0.4.192/26`   | Private  | ap-southeast-1c        | Backup, EFS, internal services    |
+
+> Remaining free IP ranges: `10.0.5.0` – `10.0.7.255` (~768 IPs)
+
+---
+
+## 📐 Subnet Plan for VPC Controllers (`10.0.8.0/22`)
+
+| Subnet Name              | CIDR Block      | Type     | Availability Zone     | Notes                               |
+|--------------------------|------------------|----------|------------------------|-------------------------------------|
+| controllers-public-a     | `10.0.8.0/26`     | Public   | ap-southeast-1a        | For NAT Gateway, ALB, Bastion       |
+| controllers-private-a    | `10.0.8.64/26`    | Private  | ap-southeast-1a        | Controller services, EC2            |
+| controllers-private-b    | `10.0.8.128/26`   | Private  | ap-southeast-1b        | HA controller, DB replica           |
+| controllers-private-c    | `10.0.8.192/26`   | Private  | ap-southeast-1c        | EFS, monitoring, worker services    |
+
+> Remaining free IP ranges: `10.0.9.0` – `10.0.11.255` (~768 IPs)
+
+---
+
+## ✅ Notes
+
+- Each `/26` subnet provides 64 IPs, 59 usable after AWS reserves 5.
+- Subnets are distributed across multiple AZs for high availability (HA).
+- Public subnets require an **Internet Gateway**.
+- Private subnets typically use **NAT Gateway** or **VPC Peering** for outbound access.
+- Leave remaining CIDR ranges for future expansion or multi-AZ setup.
+
 ## WS - Security SDLC
 
 ### Application
